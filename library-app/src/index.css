@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif,"Dancing Script", cursive;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: -1; 
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background-color: #ffffff21;
+  box-shadow: 0 0 30px 0 rgb(0, 0, 0);
+}
+.navbar img{
+  width: 70px;
+}
+.navbar ul{
+  padding: 10px 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.148);
+  background-color: #ffffff48;
+}
+.navbar ul li{
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+li.active{
+  color: #000000;
+}
+.navbar button{
+  background: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border: 0;
+  outline: 0;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.navbar li{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.navbar li:hover{
+    color: aqua;
+}
+.navbar img{
+  width: 40px;
+}
+.left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.left a{
+  color: #fff;
+  text-decoration: none;
+}
+.cent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+.group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+.log{
+  text-align: center;  
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  width: 400px;
+}
+.log h2{
+  padding: 10px;
+  text-align: left;
+}
+.log p{
+  padding: 10px;
+  font-size: 16px;
+}
+.log a{
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.log a:hover{
+  color: rgb(14, 155, 176);
+  cursor: pointer;
+}
+.input{
+  padding: 10px;
+}
+.input p{
+ text-align: left;
+ font-size: 16px;
+ padding-left: 40px;
+}
+.input input{
+  border: none;
+  border-radius: 10px;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  padding: 8px;
+}
+.log button{
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.log button:hover{
+  background-color: rgb(23, 152, 152);
+    color: #ffffff;
+}
+.search-form {
+  display: flex;
+  justify-content: left;
+  padding: 30px;
+  /* margin: 40px auto 20px; */
+  width: 100%;
+}
+.search-form input {
+  width: 40%;
+  height: 15px;
+  padding: 14px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+/* .search-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+} */
+ .options {
+  display: flex;
+  justify-content: left;
+  gap: 40px;
+  padding: 15px 0;
+  padding-left: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 80%;
+  max-width: 900px;
+  margin-right: auto;
+}
+.options a{
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.options a:hover{
+  color: rgb(14, 155, 176);
+  cursor: pointer;
+}
+.usermain{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly; 
+  align-items: flex-start;
+  gap: 40px; 
+  padding: 40px;
+  min-height: 10vh;
+  width: 100%; 
+}
+.books{
+  padding: 10px;
+  background: #469dfbdf;
+  border: 0px;
+  border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(117, 148, 158, 0.995);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 280px;
+  height: 450px;
+}
+.books img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.books h4 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.books h5 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+.books button { 
+  background-color: #033972;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+.books button:hover {
+  background-color: #0056b3;
+}
