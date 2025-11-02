@@ -33,7 +33,26 @@ export default function SignUp() {
             navigate("/login");
         } catch (err) {
             console.error("Registration failed:", err);
-            setMessage("Registration Failed! Please try again.");
+            let errorMessage = "Registration Failed! Please try again.";
+            
+            if (err?.data?.error) {
+                // Backend returns { error: "message" }
+                errorMessage = err.data.error;
+            } else if (err?.data?.username) {
+                // Validation error for username field
+                errorMessage = err.data.username;
+            } else if (err?.data?.email) {
+                // Validation error for email field
+                errorMessage = err.data.email;
+            } else if (err?.data?.password) {
+                // Validation error for password field
+                errorMessage = err.data.password;
+            } else if (err?.message) {
+                // Generic error message
+                errorMessage = err.message;
+            }
+            
+            setMessage(errorMessage);
             setMessageType("error");
         }
     }

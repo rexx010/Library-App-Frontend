@@ -40,8 +40,25 @@ function Login() {
             }
         }catch(err){
             console.error("Login Failed:", err)
-            setMessage("Login Failed! Please check your credentials.")
-            setMessageType("error")
+            // Extract the error message from the backend response
+            let errorMessage = "Login Failed! Please check your credentials.";
+            
+            if (err?.data?.error) {
+                // Backend returns { error: "Username not found" } or { error: "Incorrect password" }
+                errorMessage = err.data.error;
+            } else if (err?.data?.username) {
+                // Validation error for username field
+                errorMessage = err.data.username;
+            } else if (err?.data?.password) {
+                // Validation error for password field
+                errorMessage = err.data.password;
+            } else if (err?.message) {
+                // Generic error message
+                errorMessage = err.message;
+            }
+            
+            setMessage(errorMessage);
+            setMessageType("error");
         }
     }
 
