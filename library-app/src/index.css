@@ -141,6 +141,26 @@ li.active{
   background-color: rgb(23, 152, 152);
     color: #ffffff;
 }
+.adminform{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+.adminform button{
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+.adminform button:hover {
+  background-color: #0056b3;
+  color: white;
+}
 .search-form {
   display: flex;
   justify-content: left;
@@ -200,7 +220,7 @@ li.active{
   background: #469dfbdf;
   border: 0px;
   border-radius: 10px;
-   box-shadow: 0 4px 8px rgba(117, 148, 158, 0.995);
+  box-shadow: 0 4px 8px rgba(117, 148, 158, 0.995);
   overflow: hidden;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -220,7 +240,12 @@ li.active{
   margin: 10px 0;
   font-weight: 600;
 }
-.books button { 
+.bookbutton{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bookbutton button{
   background-color: #033972;
   color: white;
   border: none;
@@ -230,8 +255,157 @@ li.active{
   cursor: pointer;
   font-size: 0.95rem;
   transition: background-color 0.3s ease;
-  width: 200px;
+  width: 100px;
+}
+.bookbutton button:hover {
+  background-color: #0056b3;
+}
+.books button{
+  background-color: #033972;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  width: 100px;
 }
 .books button:hover {
   background-color: #0056b3;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+/* .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+} */
+ /* Add to your CSS */
+.add-content form {
+  background: #504f4f;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  animation: fadeIn 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.add-content label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.add-content input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-buttons {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+.modal-content {
+  background: #504f4f;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.modal-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal-buttons button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

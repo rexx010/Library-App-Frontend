@@ -1,0 +1,71 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif,"Dancing Script", cursive;
+}
+
+.cent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+.log{
+  text-align: center;  
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  width: 400px;
+}
+.log h2{
+  padding: 10px;
+  text-align: left;
+}
+.log p{
+  padding: 10px;
+  font-size: 16px;
+}
+.log a{
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.log a:hover{
+  color: rgb(14, 155, 176);
+  cursor: pointer;
+}
+.input{
+  padding: 10px;
+}
+.input p{
+ text-align: left;
+ font-size: 16px;
+ padding-left: 40px;
+}
+.input input{
+  border: none;
+  border-radius: 10px;
+  font-size: 10px;
+  width: 300px;
+  height: 30px;
+  padding: 8px;
+}
+.log button{
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.log button:hover{
+  background-color: rgb(23, 152, 152);
+    color: #ffffff;
+} */

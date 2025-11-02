@@ -12,6 +12,10 @@ import User from "./pages/users/User.jsx"
 import UserLayout from "./layout/UserLayout.jsx"
 import UserBorrowedBook from "./pages/users/UserBorrowedBook.jsx"
 import ReservedBook from "./pages/users/ReservedBook.jsx"
+import BookInfo from "./layout/BookInfo.jsx"
+import BookDetail from "./components/BookDetail.jsx"
+import AdminLayout from "./layout/AdminLayout.jsx"
+import Admin from "./pages/admin/Admin.jsx"
 
 
 function App() {
@@ -31,7 +35,15 @@ function App() {
           <Route index element={<User/>} />
           <Route path="borrowBooks" element={<UserBorrowedBook/>}/>
           <Route path="reservedBook" element={<ReservedBook/>}/>
+          <Route path=":id" element={<BookDetail/>}/>
         </Route>
+        <Route path='/admin' element={<AdminLayout/>}>
+          <Route index element={<Admin/>} />
+          <Route path=":id" element={<BookDetail/>}/> 
+        </Route>
+        {/* <Route path="/BookInfo" element={<BookInfo/>}>
+          <Route path=""/>
+        </Route> */}
       </Route>
     )
   )
