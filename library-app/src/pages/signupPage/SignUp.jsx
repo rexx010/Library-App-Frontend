@@ -74,7 +74,11 @@ export default function SignUp() {
                 </div>
                 <div className="input">
                     <p>Role</p>
-                    <input type="text" placeholder="Admin/user" onChange={(event)=>(setRole(event.target.value))}/>
+                    <select onChange={(event) => setRole(event.target.value)} defaultValue="" className="role-select">
+                        <option value="" disabled>Select a role</option>
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="USER">USER</option>
+                    </select>
                 </div>
                 <div className="input">
                     <p>Password</p>
