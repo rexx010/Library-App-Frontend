@@ -32,7 +32,7 @@ function Login() {
 
             if(!response.error){
                 console.log("Login Successful:", response)
-                if(response.role === "Admin"){
+                if(response.role === "ADMIN"){
                     navigate("/admin")
                 }else{
                     navigate("/user")
