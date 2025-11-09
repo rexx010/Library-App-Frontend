@@ -71,11 +71,11 @@ function Login() {
 
                 <div className="input">
                     <p>User Name</p>
-                    <input type="text" placeholder="Enter your username..." onChange={(event) => (setUsername(event.target.value))}/>
+                    <input type="text" required placeholder="Enter your username..." onChange={(event) => (setUsername(event.target.value))}/>
                 </div>
                 <div className="input">
                     <p>Password</p>
-                    <input type="password" placeholder="..." onChange={(event) => (setPassword(event.target.value))}/>
+                    <input type="password" required placeholder="..." onChange={(event) => (setPassword(event.target.value))}/>
                 </div>
                 <a href="#"><p>Forget Password?</p></a> 
 

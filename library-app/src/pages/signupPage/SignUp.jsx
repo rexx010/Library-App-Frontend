@@ -66,15 +66,15 @@ export default function SignUp() {
 
                 <div className="input">
                     <p>User Name</p>
-                    <input type="text" placeholder="Enter your username..." onChange={(event)=>(setUsername(event.target.value))}/>
+                    <input type="text" required placeholder="Enter your username..." onChange={(event)=>(setUsername(event.target.value))}/>
                 </div>
                 <div className="input">
                     <p>Email</p>
-                    <input type="email" placeholder="Ladiesman@gmail.com" onChange={(event)=>(setEmail(event.target.value))}/>
+                    <input type="email" required placeholder="Ladiesman@gmail.com" onChange={(event)=>(setEmail(event.target.value))}/>
                 </div>
                 <div className="input">
                     <p>Role</p>
-                    <select onChange={(event) => setRole(event.target.value)} defaultValue="" className="role-select">
+                    <select onChange={(event) => setRole(event.target.value)} required defaultValue="" className="role-select">
                         <option value="" disabled>Select a role</option>
                         <option value="ADMIN">ADMIN</option>
                         <option value="USER">USER</option>
@@ -82,7 +82,7 @@ export default function SignUp() {
                 </div>
                 <div className="input">
                     <p>Password</p>
-                    <input type="password" placeholder="..." onChange={(event)=>(setPassword(event.target.value))}/>
+                    <input type="password" required placeholder="..." onChange={(event)=>(setPassword(event.target.value))}/>
                 </div>
                 {/* <a href="#"><p>Forget Password?</p></a>  */}
 
